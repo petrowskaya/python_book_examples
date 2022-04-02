@@ -41,6 +41,6 @@ for m in matchers: m.__next__()
 # Обратите внимание: для нормальной работы необходимо,
 # чтобы веб-сервер активно записывал данные в журнал.
 wwwlog = tail(open('input/access-log'))
-for line in wwwlog:
+for line in wwwlog: 
     for m in matchers:
         m.send(line) # Передача данных каждой из сопрограмм
